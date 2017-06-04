@@ -26,8 +26,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: location, span: span)
         
         map.setRegion(region, animated: true)
-        
-        // 
+
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
