@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class AppleMapsViewController: UIViewController, CLLocationManagerDelegate {
+class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var map: MKMapView!
     
@@ -24,8 +24,10 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate {
         let location = CLLocationCoordinate2D(latitude: -33.918861,longitude: 18.423300)
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
-        
         map.setRegion(region, animated: true)
+        
+        // Always show the users location
+        map.showsUserLocation = true
 
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -41,6 +43,24 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "addActivity" {
+            // Create a new GeoPoint model based off of the current user location we receive
+            let geopoint = GeoPoint(latitude: currentUserLocation.coordinate.latitude, longitude: currentUserLocation.coordinate.longitude)
+        
+            // Create a new activity that we want to pass to the next controller, containing the current location
+            let activityWithCurrentLocation = Activity()
+            activityWithCurrentLocation?.location = geopoint
+        
+            // Because we embedded our ViewController inside a Navigation Controller, we need to get it through the navigation controller
+            let navigationController = segue.destination as! UINavigationController
+            let addActivityViewController = navigationController.topViewController as! AddActivityViewController
+            
+            addActivityViewController.newActivity = activityWithCurrentLocation
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -62,6 +82,11 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate {
     {
         // An error occurred trying to retrieve users location
         print("Error \(error)")
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate
+        userLocation: MKUserLocation) {
+        map.centerCoordinate = userLocation.location!.coordinate
     }
 
 }
