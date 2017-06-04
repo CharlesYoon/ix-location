@@ -107,6 +107,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-gZ-iuk">
+                                <rect key="frame" x="16" y="321" width="343" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="selectImageFromGallery:" destination="ZQf-PG-KM3" eventType="touchUpInside" id="4vd-Zc-qow"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-qi-MqK">
+                                <rect key="frame" x="16" y="321" width="343" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -118,10 +131,15 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="wbL-79-xVF">
                             <connections>
-                                <action selector="saveActivity:" destination="ZQf-PG-KM3" id="iFP-th-a5m"/>
+                                <action selector="saveActivity:" destination="ZQf-PG-KM3" id="s7d-12-AB9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="df6-GS-qLH" id="XNr-SX-MEG"/>
+                        <outlet property="imageView" destination="0Oo-qi-MqK" id="MuC-ka-3sk"/>
+                        <outlet property="nameTextField" destination="CAu-tY-lsg" id="rwF-zf-pwH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ak-Eg-Kkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +170,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMe-Nu-BnY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Google Maps" image="ic_map" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cEi-io-wbb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cEi-io-wbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -171,7 +189,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIF-px-5kk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apple Maps" image="ic_layers" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9S-wA-JMY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r9S-wA-JMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -189,7 +207,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gde-Iu-gvH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2YN-2p-oKp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2YN-2p-oKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

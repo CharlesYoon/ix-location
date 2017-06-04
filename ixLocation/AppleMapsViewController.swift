@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, AddActivityDelegate {
 
     @IBOutlet weak var map: MKMapView!
     
@@ -60,6 +60,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             let addActivityViewController = navigationController.topViewController as! AddActivityViewController
             
             addActivityViewController.newActivity = activityWithCurrentLocation
+            addActivityViewController.delegate = self
         }
     }
 
@@ -87,6 +88,18 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     func mapView(_ mapView: MKMapView, didUpdate
         userLocation: MKUserLocation) {
         map.centerCoordinate = userLocation.location!.coordinate
+    }
+    
+    func didSaveActivity(activity: Activity) {
+        print(activity)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2DMake(activity.location.lat, activity.location.lng);
+        annotation.title = activity.name
+        map.addAnnotation(annotation)
+    }
+    
+    func didCancelActivity() {
+        
     }
 
 }

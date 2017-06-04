@@ -17,6 +17,7 @@
 		B839AF651EE4320E000AF132 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B839AF641EE4320E000AF132 /* AddActivityViewController.swift */; };
 		B839AF671EE438FF000AF132 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B839AF661EE438FF000AF132 /* Activity.swift */; };
 		B839AF691EE43A9C000AF132 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B839AF681EE43A9C000AF132 /* GeoPoint.swift */; };
+		B839AF6B1EE457F4000AF132 /* AddActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B839AF6A1EE457F4000AF132 /* AddActivityDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B839AF641EE4320E000AF132 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		B839AF661EE438FF000AF132 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B839AF681EE43A9C000AF132 /* GeoPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		B839AF6A1EE457F4000AF132 /* AddActivityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityDelegate.swift; sourceTree = "<group>"; };
 		CB3CC6E7A02060731E1BD66B /* Pods-ixLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				B839AF641EE4320E000AF132 /* AddActivityViewController.swift */,
 				B839AF661EE438FF000AF132 /* Activity.swift */,
 				B839AF681EE43A9C000AF132 /* GeoPoint.swift */,
+				B839AF6A1EE457F4000AF132 /* AddActivityDelegate.swift */,
 			);
 			path = ixLocation;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B839AF691EE43A9C000AF132 /* GeoPoint.swift in Sources */,
+				B839AF6B1EE457F4000AF132 /* AddActivityDelegate.swift in Sources */,
 				B839AF671EE438FF000AF132 /* Activity.swift in Sources */,
 				B839AF551EE2CB0F000AF132 /* AppleMapsViewController.swift in Sources */,
 				B839AF511EE2CB0F000AF132 /* AppDelegate.swift in Sources */,
