@@ -52,7 +52,9 @@
                             <constraint firstAttribute="trailing" secondItem="H6R-EH-XgT" secondAttribute="trailing" id="ut2-f3-8bF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Apple Map" id="cfG-EN-N7A"/>
+                    <navigationItem key="navigationItem" title="Apple Map" id="cfG-EN-N7A">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dsn-vJ-Yqz"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="H6R-EH-XgT" id="RZ1-hN-r9I"/>
                     </connections>
@@ -86,7 +88,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMe-Nu-BnY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Google Maps" image="ic_map" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cEi-io-wbb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cEi-io-wbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -105,7 +107,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIF-px-5kk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apple Maps" image="ic_layers" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9S-wA-JMY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r9S-wA-JMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
