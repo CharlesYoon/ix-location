@@ -19,6 +19,8 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Testing git
+        
         // A region represents the area of the map that we want to view
         // It consists of a location (CLLocationCoordinate2D) and a Span (MKCoordinateSpanMak)
         let location = CLLocationCoordinate2D(latitude: -33.918861,longitude: 18.423300)
