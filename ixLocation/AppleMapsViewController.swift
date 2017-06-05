@@ -40,11 +40,53 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+        setMapType()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setMapType()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setMapType() {
+        /*
+         Different map types
+         map.mapType = .hybrid
+         map.mapType = .hybridFlyover
+         map.mapType = .satellite
+         map.mapType = .satelliteFlyover
+         map.mapType = .standard
+         */
+        let mapType = UserDefaults.standard.string(forKey: "mapType")
+        
+        if mapType != nil {
+            
+            if mapType == "hybrid" {
+                map.mapType = .hybrid
+            }
+            
+            if mapType == "hybridFlyover" {
+                map.mapType = .hybridFlyover
+            }
+            
+            if mapType == "satellite" {
+                map.mapType = .satellite
+            }
+            
+            if mapType == "satelliteFlyover" {
+                map.mapType = .satelliteFlyover
+            }
+            
+            if mapType == "standard" {
+                map.mapType = .standard
+            }
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
