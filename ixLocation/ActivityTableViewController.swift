@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Gloss
 
 class ActivityTableViewController: UITableViewController {
 
@@ -15,15 +17,49 @@ class ActivityTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let activity1 = Activity()
-        activity1?.name = "First"
-        activity1?.description = "First Activity"
-        activities.append(activity1!)
-        
-        let activity2 = Activity()
-        activity2?.name = "Second"
-        activity2?.description = "Second Activity"
-        activities.append(activity2!)
+        Alamofire.request("https://ixlocation.firebaseio.com/activities.json").responseJSON { response in
+            //print(response.request)  // original URL request
+            //print(response.response) // HTTP URL response
+            //print(response.data)     // server data
+            //print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+                
+                let response = JSON as! NSDictionary
+                
+                for (key, value) in response {
+                    let activity = Activity()
+                    
+                    if let actDictionary = value as? [String : AnyObject] {
+                        activity?.name = actDictionary["name"] as! String
+                        activity?.description = actDictionary["description"] as! String
+                        
+                        if let geoPointDictionary = actDictionary["location"] as? [String: AnyObject] {
+                            let location = GeoPoint()
+                            location.lat = geoPointDictionary["lat"] as? Double
+                            location.lng = geoPointDictionary["lng"] as? Double
+                            activity?.location = location
+                        }
+                    }
+                    
+                    self.activities.append(activity!)
+                }
+                
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
     }
 
     override func didReceiveMemoryWarning() {
