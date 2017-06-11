@@ -9,14 +9,20 @@
 import UIKit
 import Alamofire
 import Gloss
+import Realm
 
 class ActivityTableViewController: UITableViewController {
 
-    var activities: [ActivityDto] = []
+    var activities: RLMResults<Activity> {
+        get {
+            return Activity.allObjects() as! RLMResults<Activity>
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        /*
         Alamofire.request("https://ixlocation.firebaseio.com/activities.json").responseJSON { response in
             //print(response.request)  // original URL request
             //print(response.response) // HTTP URL response
@@ -49,17 +55,7 @@ class ActivityTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-    }
-    
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        return nil
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,15 +69,15 @@ class ActivityTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.count
+        return Int(activities.count)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = activities[indexPath.item].name
-        cell.detailTextLabel?.text = activities[indexPath.item].description
+        cell.textLabel?.text = activities.object(at: UInt(indexPath.row)).name
+        cell.detailTextLabel?.text = activities.object(at: UInt(indexPath.row)).descr
 
         return cell
     }

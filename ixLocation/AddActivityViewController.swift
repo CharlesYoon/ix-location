@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Realm
 
 class AddActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -32,6 +33,26 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func saveActivity(_ sender: Any) {
         
+        let act = Activity()
+        act.name = nameTextField.text!
+        act.descr = descriptionTextView.text
+        
+        let realm = RLMRealm.default()
+        realm.beginWriteTransaction()
+        realm.add(act)
+        do {
+            try realm.commitWriteTransactionWithoutNotifying([])
+        } catch {
+            print("Error")
+        }
+        
+        newActivity?.name = nameTextField.text!
+        newActivity?.description = descriptionTextView.text
+        
+        self.delegate?.didSaveActivity(activity: self.newActivity!)
+        self.dismiss(animated: true, completion: nil)
+        
+        /*
         newActivity?.name = nameTextField.text!
         newActivity?.description = descriptionTextView.text
         
@@ -46,6 +67,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             }
             
         }
+         */
     }
     
     @IBAction func cancel(_ sender: Any) {
