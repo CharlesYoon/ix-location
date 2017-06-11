@@ -17,7 +17,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     var locationManager: CLLocationManager!
     var currentUserLocation: CLLocation!
-    var activities: [Activity] = []
+    var activities: [ActivityDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 let response = JSON as! NSDictionary
                 
                 for (key, value) in response {
-                    let activity = Activity()
+                    let activity = ActivityDto()
                     
                     if let actDictionary = value as? [String : AnyObject] {
                         activity?.name = actDictionary["name"] as! String
@@ -135,7 +135,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             let geopoint = GeoPoint(latitude: currentUserLocation.coordinate.latitude, longitude: currentUserLocation.coordinate.longitude)
         
             // Create a new activity that we want to pass to the next controller, containing the current location
-            let activityWithCurrentLocation = Activity()
+            let activityWithCurrentLocation = ActivityDto()
             activityWithCurrentLocation?.location = geopoint
         
             // Because we embedded our ViewController inside a Navigation Controller, we need to get it through the navigation controller
@@ -173,7 +173,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         map.centerCoordinate = userLocation.location!.coordinate
     }
     
-    func didSaveActivity(activity: Activity) {
+    func didSaveActivity(activity: ActivityDto) {
         print(activity)
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2DMake((activity.location?.lat!)!, (activity.location?.lng!)!);

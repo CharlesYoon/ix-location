@@ -17,7 +17,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     // Rating...
     
     var delegate: AddActivityDelegate?
-    var newActivity: Activity?
+    var newActivity: ActivityDto?
     
     override func viewDidLoad() {
         super.viewDidLoad()

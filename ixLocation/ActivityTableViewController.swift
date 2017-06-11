@@ -12,7 +12,7 @@ import Gloss
 
 class ActivityTableViewController: UITableViewController {
 
-    var activities: [Activity] = []
+    var activities: [ActivityDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ActivityTableViewController: UITableViewController {
                 let response = JSON as! NSDictionary
                 
                 for (key, value) in response {
-                    let activity = Activity()
+                    let activity = ActivityDto()
                     
                     if let actDictionary = value as? [String : AnyObject] {
                         activity?.name = actDictionary["name"] as! String
