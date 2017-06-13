@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import RealmSwift
 import FacebookCore
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyB4YuwRJrPdKuD6EQeu0JSxNX50kocaszo")
         
         // Configure Firebase
-        //FirebaseApp.configure()
+        FirebaseApp.configure()
         
         // Realm migrations
         let config = Realm.Configuration(

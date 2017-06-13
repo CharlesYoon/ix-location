@@ -18,6 +18,9 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.23.0):
     - FBSDKCoreKit
+  - Firebase/Auth (4.0.2):
+    - Firebase/Core
+    - FirebaseAuth (= 4.0.0)
   - Firebase/Core (4.0.2):
     - FirebaseAnalytics (= 4.0.1)
     - FirebaseCore (= 4.0.2)
@@ -25,6 +28,10 @@ PODS:
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseAuth (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.2):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.0):
@@ -35,9 +42,17 @@ PODS:
   - GoogleMaps/Base (2.3.0)
   - GoogleMaps/Maps (2.3.0):
     - GoogleMaps/Base
+  - GoogleToolboxForMac/DebugUtils (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.1):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.1)
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
+  - GTMSessionFetcher/Core (1.1.10)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
@@ -48,6 +63,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - FacebookCore
   - FacebookLogin
+  - Firebase/Auth
   - Firebase/Core
   - Gloss (~> 1.2)
   - GoogleMaps (= 2.3.0)
@@ -62,14 +78,16 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
+  FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
 
-PODFILE CHECKSUM: 4e3e510af6fe691d662738656bde5ce285baf6b1
+PODFILE CHECKSUM: c3ed02c5b3942bc91305cc9aeecf9c1acd37f1dd
 
 COCOAPODS: 1.2.1

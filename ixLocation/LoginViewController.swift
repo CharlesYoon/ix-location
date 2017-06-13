@@ -9,6 +9,7 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import FirebaseAuth
 
 class LoginViewController: UIViewController, LoginButtonDelegate {
 
@@ -27,19 +28,29 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
     
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         
-        let accessToken = AccessToken.current
-        print("Logged in!")
+        let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+        
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                // ...
+                return
+            }
+            // User is signed in
+            // ...
+            print("Firebase logged in")
+            let user = Auth.auth().currentUser
+            if let user = user {
+                let uid = user.uid
+                let email = user.email
+                let photoURL = user.photoURL
+                // ...
+            }
+        }
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
         // Logged out
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation

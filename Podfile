@@ -17,5 +17,6 @@ target 'ixLocation' do
   pod 'FacebookLogin'
   
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end

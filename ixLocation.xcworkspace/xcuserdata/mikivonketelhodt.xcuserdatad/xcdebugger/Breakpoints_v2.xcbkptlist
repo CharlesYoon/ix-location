@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ixLocation/LoginViewController.swift"
-            timestampString = "519034940.960627"
+            timestampString = "519038047.35866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "loginButtonDidCompleteLogin(_:result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,16 +22,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ixLocation/LoginViewController.swift"
-            timestampString = "519035946.43052"
+            timestampString = "519038047.35866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ixLocation/LoginViewController.swift"
+            timestampString = "519038020.255739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "loginButtonDidCompleteLogin(_:result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ixLocation.LoginViewController.loginButtonDidCompleteLogin (FacebookLogin.LoginButton, result : FacebookLogin.LoginResult) -&gt; ()"
+                  moduleName = "ixLocation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikivonketelhodt/Documents/XCode/ixLocation/ixLocation/LoginViewController.swift"
+                  timestampString = "519038051.560361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "876">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ixLocation.LoginViewController.(loginButtonDidCompleteLogin (FacebookLogin.LoginButton, result : FacebookLogin.LoginResult) -&gt; ()).(closure #1)"
+                  moduleName = "ixLocation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikivonketelhodt/Documents/XCode/ixLocation/ixLocation/LoginViewController.swift"
+                  timestampString = "519038051.563018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ixLocation/LoginViewController.swift"
+            timestampString = "519038023.219856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loginButtonDidCompleteLogin(_:result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ixLocation/LoginViewController.swift"
+            timestampString = "519038512.215333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "loginButtonDidCompleteLogin(_:result:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

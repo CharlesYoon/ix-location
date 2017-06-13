@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Gloss.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00103D6C821BE85971C563025527BA5D</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DE80CA0EC9071D1E0C310891B8C5E22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,16 +97,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>699D23373EE244509F784EDCE0F86F88</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B59A36C3F715C41E1206F480AD3C87D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7335E9C9689F3B8A16F063A884748533</key>
 		<dict>
 			<key>primary</key>
@@ -107,7 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFA44DB7A044720E677E8A0BD5318ACF</key>
+		<key>9F9F5B133B63A1D4DF2DCC3871BDE253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7223EA8C8CC0F7FC1BDF2909CC9E682</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
