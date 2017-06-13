@@ -20,6 +20,7 @@
 		B839AF6B1EE457F4000AF132 /* AddActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B839AF6A1EE457F4000AF132 /* AddActivityDelegate.swift */; };
 		B84AFFA71EEDC512001EAB0D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84AFFA61EEDC512001EAB0D /* Activity.swift */; };
 		B84AFFA91EEFCF1B001EAB0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84AFFA81EEFCF1B001EAB0D /* LoginViewController.swift */; };
+		B84AFFAB1EEFDA35001EAB0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B84AFFAA1EEFDA35001EAB0D /* GoogleService-Info.plist */; };
 		B86BF5221EE5F1B000FE7665 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BF5211EE5F1B000FE7665 /* ActivityTableViewController.swift */; };
 		B86BF5241EE5F93A00FE7665 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BF5231EE5F93A00FE7665 /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		B839AF6A1EE457F4000AF132 /* AddActivityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityDelegate.swift; sourceTree = "<group>"; };
 		B84AFFA61EEDC512001EAB0D /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B84AFFA81EEFCF1B001EAB0D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B84AFFAA1EEFDA35001EAB0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B86BF5211EE5F1B000FE7665 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		B86BF5231EE5F93A00FE7665 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CB3CC6E7A02060731E1BD66B /* Pods-ixLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		B839AF4F1EE2CB0F000AF132 /* ixLocation */ = {
 			isa = PBXGroup;
 			children = (
+				B84AFFAA1EEFDA35001EAB0D /* GoogleService-Info.plist */,
 				B839AF501EE2CB0F000AF132 /* AppDelegate.swift */,
 				B839AF521EE2CB0F000AF132 /* GoogleMapsViewController.swift */,
 				B839AF541EE2CB0F000AF132 /* AppleMapsViewController.swift */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B839AF5D1EE2CB0F000AF132 /* LaunchScreen.storyboard in Resources */,
+				B84AFFAB1EEFDA35001EAB0D /* GoogleService-Info.plist in Resources */,
 				B839AF5A1EE2CB0F000AF132 /* Assets.xcassets in Resources */,
 				B839AF581EE2CB0F000AF132 /* Main.storyboard in Resources */,
 			);

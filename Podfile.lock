@@ -18,12 +18,26 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.23.0):
     - FBSDKCoreKit
+  - Firebase/Core (4.0.2):
+    - FirebaseAnalytics (= 4.0.1)
+    - FirebaseCore (= 4.0.2)
+  - FirebaseAnalytics (4.0.1):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.2):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
   - Gloss (1.2.4)
   - GoogleMaps (2.3.0):
     - GoogleMaps/Maps (= 2.3.0)
   - GoogleMaps/Base (2.3.0)
   - GoogleMaps/Maps (2.3.0):
     - GoogleMaps/Base
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
@@ -34,6 +48,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - FacebookCore
   - FacebookLogin
+  - Firebase/Core
   - Gloss (~> 1.2)
   - GoogleMaps (= 2.3.0)
   - RealmSwift
@@ -45,11 +60,16 @@ SPEC CHECKSUMS:
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
   FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
+  Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
+  FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
+  FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
 
-PODFILE CHECKSUM: 4ab23a6407755e79b0ef9619e4abb4d5d0d9dad5
+PODFILE CHECKSUM: 4e3e510af6fe691d662738656bde5ce285baf6b1
 
 COCOAPODS: 1.2.1

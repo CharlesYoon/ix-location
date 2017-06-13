@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyB4YuwRJrPdKuD6EQeu0JSxNX50kocaszo")
         
+        // Configure Firebase
+        //FirebaseApp.configure()
+        
         // Realm migrations
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
@@ -47,6 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         
         return SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return SDKApplicationDelegate.shared.application(application, open: url, sourceApplication:  sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

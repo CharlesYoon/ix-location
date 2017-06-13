@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>543841172371-914go2io6s3gau8407qdl2mtp09oggre.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.543841172371-914go2io6s3gau8407qdl2mtp09oggre</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAuCC12Mz-_eJJ-bg_Qnf_4LeYsLHJYzaw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>543841172371</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rbgapps.ixLocation</string>
+	<key>PROJECT_ID</key>
+	<string>ixlocation</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ixlocation.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:543841172371:ios:1b19ba0cba8287a6</string>
+	<key>DATABASE_URL</key>
+	<string>https://ixlocation.firebaseio.com</string>
+</dict>
+</plist>
