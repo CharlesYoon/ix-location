@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tcs-fE-d9A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -218,7 +218,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMe-Nu-BnY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Google Maps" image="ic_map" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cEi-io-wbb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cEi-io-wbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -237,7 +237,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIF-px-5kk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apple Maps" image="ic_layers" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9S-wA-JMY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r9S-wA-JMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -255,7 +255,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gde-Iu-gvH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2YN-2p-oKp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2YN-2p-oKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -268,13 +268,31 @@
             </objects>
             <point key="canvasLocation" x="2733.5999999999999" y="358.4707646176912"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="emN-hf-zKL">
+            <objects>
+                <viewController id="Tcs-fE-d9A" customClass="LoginViewController" customModule="ixLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jOc-27-Yv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xav-dV-27L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JQh-mU-o0e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YsW-l8-Gao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-964" y="206"/>
+        </scene>
         <!--Activities-->
         <scene sceneID="XFG-Eb-h2a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="boN-cH-Vkh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Activities" image="ic_view_list" id="UJl-sD-P0I"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kbv-hv-O2Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kbv-hv-O2Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -492,7 +510,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7MA-dH-fuR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="fdc-hZ-VNl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zhq-v9-Vb6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zhq-v9-Vb6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

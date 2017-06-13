@@ -1,5 +1,23 @@
 PODS:
   - Alamofire (4.4.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FBSDKCoreKit (4.23.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.23.0):
+    - FBSDKCoreKit
   - Gloss (1.2.4)
   - GoogleMaps (2.3.0):
     - GoogleMaps/Maps (= 2.3.0)
@@ -14,17 +32,24 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - FacebookCore
+  - FacebookLogin
   - Gloss (~> 1.2)
   - GoogleMaps (= 2.3.0)
   - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
+  FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
 
-PODFILE CHECKSUM: 5e0315f147247266020cf989c83d4263c30f405b
+PODFILE CHECKSUM: 4ab23a6407755e79b0ef9619e4abb4d5d0d9dad5
 
 COCOAPODS: 1.2.1
