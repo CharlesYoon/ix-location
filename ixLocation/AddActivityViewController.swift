@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import Realm
+import FirebaseStorage
 
 class AddActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,6 +16,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     // Rating...
+    @IBOutlet weak var progress: UIProgressView!
     
     var delegate: AddActivityDelegate?
     var newActivity: ActivityDto?
@@ -33,29 +34,82 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func saveActivity(_ sender: Any) {
         
-        let act = Activity()
-        act.name = nameTextField.text!
-        act.descr = descriptionTextView.text
+        newActivity?.name = nameTextField.text!
+        newActivity?.description = descriptionTextView.text
         
-        let realm = RLMRealm.default()
-        realm.beginWriteTransaction()
-        realm.add(act)
-        do {
-            try realm.commitWriteTransactionWithoutNotifying([])
-        } catch {
-            print("Error")
+        if let image = newActivity?.image {
+            // Get a reference to the storage service using the default Firebase App
+            let storage = Storage.storage()
+            
+            // Create a storage reference from our storage service
+            let storageRef = storage.reference()
+            
+            let imagesRef = storageRef.child("images/\(String(describing: newActivity?.name!)).jpg")
+            
+            // Local file you want to upload
+            //let localFile = image. //URL(string: "path/to/image")!
+            
+            // Create the file metadata
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            // Upload file and metadata to the object 'images/mountains.jpg'
+            //let uploadTask = storageRef.putFile(from: localFile, metadata: metadata)
+            let jpg = UIImageJPEGRepresentation(image, CGFloat(1))
+            let uploadTask = imagesRef.putData(jpg!)
+            
+            // Listen for state changes, errors, and completion of the upload.
+            uploadTask.observe(.resume) { snapshot in
+                // Upload resumed, also fires when the upload starts
+            }
+            
+            uploadTask.observe(.pause) { snapshot in
+                // Upload paused
+            }
+            
+            uploadTask.observe(.progress) { snapshot in
+                // Upload reported progress
+                let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount)
+                    / Double(snapshot.progress!.totalUnitCount)
+                self.progress.progress = Float(percentComplete)
+            }
+            
+            uploadTask.observe(.success) { snapshot in
+                // Upload completed successfully
+                self.newActivity?.imageUrl = snapshot.metadata?.downloadURL()?.absoluteString
+                self.postActivity()
+            }
+            
+            uploadTask.observe(.failure) { snapshot in
+                if let error = snapshot.error as? NSError {
+                    switch (StorageErrorCode(rawValue: error.code)!) {
+                    case .objectNotFound:
+                        // File doesn't exist
+                        break
+                    case .unauthorized:
+                        // User doesn't have permission to access file
+                        break
+                    case .cancelled:
+                        // User canceled the upload
+                        break
+                        
+                        /* ... */
+                        
+                    case .unknown:
+                        // Unknown error occurred, inspect the server response
+                        break
+                    default:
+                        // A separate error occurred. This is a good place to retry the upload.
+                        break
+                    }
+                }
+            }
+        } else {
+            postActivity()
         }
-        
-        newActivity?.name = nameTextField.text!
-        newActivity?.description = descriptionTextView.text
-        
-        self.delegate?.didSaveActivity(activity: self.newActivity!)
-        self.dismiss(animated: true, completion: nil)
-        
-        /*
-        newActivity?.name = nameTextField.text!
-        newActivity?.description = descriptionTextView.text
-        
+    }
+    
+    func postActivity() {
         Alamofire.request("https://ixlocation.firebaseio.com/activities.json", method: .post, parameters: newActivity?.toJSON(), encoding: JSONEncoding.default).responseJSON { response in
             
             switch response.result {
@@ -65,9 +119,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             case .failure: break
                 // Failure... handle error
             }
-            
         }
-         */
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -85,7 +137,6 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
-    
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -100,6 +151,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
         
         // Set image to display the selected image.
         imageView.image = selectedImage
+        newActivity?.image = selectedImage
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)

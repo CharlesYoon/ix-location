@@ -18,5 +18,6 @@ target 'ixLocation' do
   
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
 end

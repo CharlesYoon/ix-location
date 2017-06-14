@@ -44,6 +44,8 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                 let email = user.email
                 let photoURL = user.photoURL
                 // ...
+            } else {
+                // user not authenticated
             }
         }
     }

@@ -53,7 +53,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
                 
-                let response = JSON as! NSDictionary
+                if let response = JSON as? NSDictionary {
                 
                 for (key, value) in response {
                     let activity = ActivityDto()
@@ -77,6 +77,7 @@ class AppleMapsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                     
                     self.activities.append(activity!)
                 }
+            }
             }
         }
         

@@ -16,25 +16,29 @@ class ActivityDto: Decodable, Glossy {
     var description: String?
     var image: UIImage?
     var location: GeoPoint?
+    var imageUrl: String?
     
     init?() {
         self.name = ""
         self.description = ""
         self.image = nil
         self.location = GeoPoint(latitude: 0.0, longitude: 0.0)
+        self.imageUrl = ""
     }
     
     required init?(json: JSON) {
         self.name = "name" <~~ json
         self.description = "description" <~~ json
         self.location = "location" <~~ json
+        self.imageUrl = "imageUrl" <~~ json
     }
     
     func toJSON() -> JSON? {
         return jsonify([
             "name" ~~> self.name,
             "description" ~~> self.description,
-            "location" ~~> self.location
+            "location" ~~> self.location,
+            "imageUrl" ~~> self.imageUrl
         ])
     }
     
