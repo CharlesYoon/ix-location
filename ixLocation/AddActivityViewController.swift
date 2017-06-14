@@ -44,7 +44,8 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
             // Create a storage reference from our storage service
             let storageRef = storage.reference()
             
-            let imagesRef = storageRef.child("images/\(String(describing: newActivity?.name!)).jpg")
+            if let imageName = newActivity?.name {
+            let imagesRef = storageRef.child("images/\(imageName).jpg")
             
             // Local file you want to upload
             //let localFile = image. //URL(string: "path/to/image")!
@@ -103,6 +104,7 @@ class AddActivityViewController: UIViewController, UIImagePickerControllerDelega
                         break
                     }
                 }
+            }
             }
         } else {
             postActivity()

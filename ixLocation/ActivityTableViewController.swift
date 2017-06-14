@@ -10,19 +10,15 @@ import UIKit
 import Alamofire
 import Gloss
 import Realm
+import FirebaseStorage
 
 class ActivityTableViewController: UITableViewController {
 
-    var activities: RLMResults<Activity> {
-        get {
-            return Activity.allObjects() as! RLMResults<Activity>
-        }
-    }
+    var activities: [ActivityDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        /*
         Alamofire.request("https://ixlocation.firebaseio.com/activities.json").responseJSON { response in
             //print(response.request)  // original URL request
             //print(response.response) // HTTP URL response
@@ -53,9 +49,30 @@ class ActivityTableViewController: UITableViewController {
                 }
                 
                 self.tableView.reloadData()
+                
+                // Loop through activities and download images
+                for activity in self.activities {
+                    
+                    let storageRef = Storage.storage().reference()
+                
+                    let imagesRef = storageRef.child("images/\(activity.name!).jpg")
+                    
+                    imagesRef.getData(maxSize: 10 * 1024 * 1024, completion: {(data, error) in
+                        
+                        if let error = error {
+                            // Uh-oh, an error occurred!
+                            print(error.localizedDescription)
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            activity.image = UIImage(data: data!)
+                            self.tableView.reloadData()
+                        }
+                        
+                    })
+                    
+                }
             }
         }
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,8 +93,12 @@ class ActivityTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = activities.object(at: UInt(indexPath.row)).name
-        cell.detailTextLabel?.text = activities.object(at: UInt(indexPath.row)).descr
+        cell.textLabel?.text = activities[indexPath.row].name
+        cell.detailTextLabel?.text = activities[indexPath.row].description
+        
+        if let image = activities[indexPath.row].image {
+            cell.imageView?.image = image
+        }
 
         return cell
     }

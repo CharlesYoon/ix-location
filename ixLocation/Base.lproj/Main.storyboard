@@ -160,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" textLabel="ian-eO-eq6" detailTextLabel="d9F-SA-n6g" style="IBUITableViewCellStyleSubtitle" id="zWh-qJ-OpN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" textLabel="ian-eO-eq6" detailTextLabel="d9F-SA-n6g" imageView="XaM-74-dCc" style="IBUITableViewCellStyleSubtitle" id="zWh-qJ-OpN">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zWh-qJ-OpN" id="j9s-uD-E5v">
@@ -168,19 +168,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ian-eO-eq6">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="60" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d9F-SA-n6g">
-                                            <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                            <rect key="frame" x="60" y="25.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="first" id="XaM-74-dCc">
+                                            <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -223,7 +227,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMe-Nu-BnY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Google Maps" image="ic_map" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cEi-io-wbb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cEi-io-wbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -242,7 +246,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIF-px-5kk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Apple Maps" image="ic_layers" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r9S-wA-JMY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9S-wA-JMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -260,7 +264,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gde-Iu-gvH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2YN-2p-oKp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2YN-2p-oKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -297,7 +301,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="boN-cH-Vkh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Activities" image="ic_view_list" id="UJl-sD-P0I"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kbv-hv-O2Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kbv-hv-O2Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -515,7 +519,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7MA-dH-fuR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="fdc-hZ-VNl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zhq-v9-Vb6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zhq-v9-Vb6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -530,6 +534,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
         <image name="ic_layers" width="24" height="24"/>
         <image name="ic_map" width="24" height="24"/>
         <image name="ic_view_list" width="24" height="24"/>
