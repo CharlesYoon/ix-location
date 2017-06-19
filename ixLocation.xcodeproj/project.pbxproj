@@ -159,7 +159,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -386,10 +386,11 @@
 			baseConfigurationReference = CB3CC6E7A02060731E1BD66B /* Pods-ixLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ixLocation/ixLocation.entitlements;
 				DEVELOPMENT_TEAM = 7JW7LM2822;
 				INFOPLIST_FILE = ixLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixperienceLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -400,10 +401,11 @@
 			baseConfigurationReference = 456674CE64C48D6525B6C07C /* Pods-ixLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ixLocation/ixLocation.entitlements;
 				DEVELOPMENT_TEAM = 7JW7LM2822;
 				INFOPLIST_FILE = ixLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixperienceLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

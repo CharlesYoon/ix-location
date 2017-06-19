@@ -8,11 +8,18 @@
 
 import UIKit
 import MapKit
+import UserNotifications
 
 class SettingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Request Authorization
+        UNUserNotificationCenter.current().requestAuthorization(options:
+            [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
+                // Handle Error
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +110,28 @@ class SettingsTableViewController: UITableViewController {
                 cell.accessoryType = .checkmark
             }
         }
+        
+        if indexPath.section == 3 && indexPath.row == 0 {
+            // Send notification
+            sendNotification()
+        }
+    }
+    
+    func sendNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Meeting Reminder"
+        content.subtitle = "Meeting in 20 minutes!"
+        content.body = "Don't forget to bring coffee."
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        
+        let requestIdentifier = "demoNotification"
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+                // Handle error
+        })
     }
 
 }
