@@ -18,6 +18,7 @@ class ActivityDto: Decodable, Glossy {
     var location: GeoPoint?
     var imageUrl: String?
     var featureA: String?
+    var featureB: String?
     
     init?() {
         self.name = ""
