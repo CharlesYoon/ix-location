@@ -45,6 +45,7 @@
 		B84AFFAA1EEFDA35001EAB0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B86BF5211EE5F1B000FE7665 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		B86BF5231EE5F93A00FE7665 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		B8A2ADB51EF7C42B005EFE6B /* ixLocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ixLocation.entitlements; sourceTree = "<group>"; };
 		CB3CC6E7A02060731E1BD66B /* Pods-ixLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +99,7 @@
 		B839AF4F1EE2CB0F000AF132 /* ixLocation */ = {
 			isa = PBXGroup;
 			children = (
+				B8A2ADB51EF7C42B005EFE6B /* ixLocation.entitlements */,
 				B84AFFAA1EEFDA35001EAB0D /* GoogleService-Info.plist */,
 				B839AF501EE2CB0F000AF132 /* AppDelegate.swift */,
 				B839AF521EE2CB0F000AF132 /* GoogleMapsViewController.swift */,
@@ -155,6 +157,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7JW7LM2822;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -379,10 +386,11 @@
 			baseConfigurationReference = CB3CC6E7A02060731E1BD66B /* Pods-ixLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ixLocation/ixLocation.entitlements;
 				DEVELOPMENT_TEAM = 7JW7LM2822;
 				INFOPLIST_FILE = ixLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixperienceLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -393,10 +401,11 @@
 			baseConfigurationReference = 456674CE64C48D6525B6C07C /* Pods-ixLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ixLocation/ixLocation.entitlements;
 				DEVELOPMENT_TEAM = 7JW7LM2822;
 				INFOPLIST_FILE = ixLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbgapps.ixperienceLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
